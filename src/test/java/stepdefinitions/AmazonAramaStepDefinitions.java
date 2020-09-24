@@ -45,6 +45,19 @@ public class AmazonAramaStepDefinitions {
     }
 
 
+    @Given("kullanici dropdown da {string} secer")
+    public void kullanici_dropdown_da_secer(String string) {
+        Select select = new Select(amazonPage.amazonDropdown);
+        select.selectByVisibleText(string);
+    }
+
+    @Given("kullanici {string} aramasi yapar")
+    public void kullanici_aramasi_yapar(String string) {
+      amazonPage.amazonAramaKutusu.sendKeys(string+Keys.ENTER);
+    }
+
+
+
 
 
 }

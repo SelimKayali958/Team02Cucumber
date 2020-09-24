@@ -5,16 +5,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class AmazonPage {
+public class EbayPage {
 
-    public AmazonPage(){
+    public EbayPage (){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy (id = "searchDropdownBox")
-    public WebElement amazonDropdown;
+    @FindBy (id = "gh-ac")
+    public WebElement ebayAramaKutusu;
 
-    @FindBy (id = "twotabsearchtextbox")
-    public WebElement amazonAramaKutusu;
+    @FindBy (xpath = "//h1[@class='srp-controls__count-heading']")
+    public WebElement ebaySonuc;
+
+
+
 
 }

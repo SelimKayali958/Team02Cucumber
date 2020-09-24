@@ -1,62 +1,65 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/amazonArama.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/ebayArama.feature");
 formatter.feature({
-  "name": "Amazon Arama",
+  "name": "Ebay Arama",
   "description": "",
-  "keyword": "Feature"
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@ebayArama"
+    }
+  ]
 });
 formatter.scenario({
-  "name": "TestCase01 kullanici amazonda kitap arar",
+  "name": "TestCase05 kulanici ebayde kindle arar",
   "description": "",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@ebayArama"
+    },
+    {
+      "name": "@ebay02"
+    }
+  ]
 });
 formatter.step({
-  "name": "kullanici amazon sayfasina gider",
+  "name": "kullanici ebay gider",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "stepdefinitions.AmazonAramaStepDefinitions.kullanici_amazon_sayfasina_gider()"
+  "location": "stepdefinitions.EbayAramaStepDefinitions.kullanici_ebay_gider()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "kullanici dropdown da Books secer",
+  "name": "kullanici \"kindle\" aramasi yapar",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepdefinitions.AmazonAramaStepDefinitions.kullanici_dropdown_da_Books_secer()"
+  "location": "stepdefinitions.AmazonAramaStepDefinitions.kullanici_aramasi_yapar(java.lang.String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "kullanici qa automation aramasi yapar",
+  "name": "kullanici ebay sonucu yazdirir",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepdefinitions.AmazonAramaStepDefinitions.kullanici_qa_automation_aramasi_yapar()"
+  "location": "stepdefinitions.EbayAramaStepDefinitions.kullanici_ebay_sonucu_yazdirir()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "kullanici cikan sonucu yazdirir",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepdefinitions.AmazonAramaStepDefinitions.kullanici_cikan_sonucu_yazdirir()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "kullanici sayfayi kapatir",
+  "name": "kullanici driver kapatir",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepdefinitions.AmazonAramaStepDefinitions.kullanici_sayfayi_kapatir()"
+  "location": "stepdefinitions.EbayAramaStepDefinitions.kullanici_driver_kapatir()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 });

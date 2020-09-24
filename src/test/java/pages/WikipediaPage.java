@@ -5,16 +5,16 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class AmazonPage {
+public class WikipediaPage {
 
-    public AmazonPage(){
+    public WikipediaPage (){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy (id = "searchDropdownBox")
-    public WebElement amazonDropdown;
+    @FindBy (id = "searchInput")
+    public WebElement wikipediaAramaKutusu;
 
-    @FindBy (id = "twotabsearchtextbox")
-    public WebElement amazonAramaKutusu;
+    @FindBy (id = "searchLanguage")
+    public WebElement wikipediaDropdown;
 
 }

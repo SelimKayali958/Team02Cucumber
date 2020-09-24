@@ -11,18 +11,19 @@ import org.junit.runner.RunWith;
         plugin = {"html:target/default-cucumber-reports"},  // rapor oluşturmak için
         features = "src/test/resources/features",  // features klasörünün adresini
         glue = "stepdefinitions", // testlerinin içerisinde olduğu paketin ismi
-        dryRun = false  // senaryoda oluşturduğumuz anca henüz test methodu yazılmamış
+        tags = "@ebay02", // seçtiğiniz tag'a ait testler çalıştırılır.
+        dryRun = false// senaryoda oluşturduğumuz anca henüz test methodu yazılmamış
         // olan adımların(steps) methodlarını consol'da görmek için "dryRun = true"
         // şeklinde kullanıyoruz.
-        // dryRun = false olursa, testleri çalıştırır.
+        // dryRun = false olursa, testleri çalıştırır.  eksik olan methodları bulur ve size öneride bulunur.
         // dryRun = true  olursa, eksik olan methodları bulur ve size öneride bulunur.
+
+
+
 )
 
 
 
-
 public class Runner {
-
-
 
 }
